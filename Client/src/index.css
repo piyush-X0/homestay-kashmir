@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply text-gray-900 bg-white;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto;
+  }
+}
+
+/* Animated Stars */
+.stars {
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  box-shadow: 1744px 122px #fff,134px 1321px #fff,1882px 812px #fff;
+  animation: animStar 50s linear infinite;
+}
+
+.stars2 {
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow: 1744px 122px #fff,134px 1321px #fff,1882px 812px #fff;
+  animation: animStar2 100s linear infinite;
+}
+
+.stars3 {
+  width: 3px;
+  height: 3px;
+  background: transparent;
+  box-shadow: 1744px 122px #fff,134px 1321px #fff,1882px 812px #fff;
+  animation: animStar3 150s linear infinite;
+}
+
+@keyframes animStar {
+  from {transform: translateY(0px)}
+  to {transform: translateY(-2000px)}
+}
+
+@keyframes animStar2 {
+  from {transform: translateY(0px)}
+  to {transform: translateY(-2000px)}
+}
+
+@keyframes animStar3 {
+  from {transform: translateY(0px)}
+  to {transform: translateY(-2000px)}
+}
+
+/* Title Animation */
+.animate-title {
+  animation: fadeInUp 1s ease-out;
+}
+
+.animate-subtitle {
+  animation: fadeInUp 1s ease-out 0.3s backwards;
+}
+
+.animate-button {
+  animation: fadeInUp 1s ease-out 0.6s backwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Parallax Effect */
+.parallax-container {
+  perspective: 1000px;
+}
+
+.parallax-layer {
+  position: absolute;
+  inset: -5%;
+  background-size: cover;
+  transition: transform 0.1s ease-out;
+}
+
+/* Live Gradient Animation */
+.live-gradient {
+  background: linear-gradient(
+    45deg,
+    #3b82f6,
+    #6366f1,
+    #8b5cf6,
+    #6366f1,
+    #3b82f6
+  );
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Mouse Hover Effects */
+.hover-glow {
+  transition: all 0.3s ease;
+}
+
+.hover-glow:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.4);
+}
+
+/* Floating Animation */
+.floating {
+  animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 15px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
+}

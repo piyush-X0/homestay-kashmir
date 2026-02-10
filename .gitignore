@@ -1,0 +1,22 @@
+﻿# Node modules
+node_modules/
+Client/node_modules/
+Server/node_modules/
+
+# Environment variables
+.env
+
+# Build/output folders
+dist/
+build/
+.cache/
+.vite/
+.next/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db

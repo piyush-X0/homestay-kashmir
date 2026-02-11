@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { getImageUrl } from '../utils/api';
+import { getImageUrl } from '../../utils/api';
 
 interface PhotoCarouselProps {
   photos: string[];

@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // Get API base URL from environment, with fallback to localhost for development
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 const api = axios.create({
   baseURL: `${API_BASE_URL}`,
@@ -78,7 +78,7 @@ export const getImageUrl = (imagePath: string): string => {
   if (imagePath.startsWith('http')) {
     return imagePath;
   }
-  const baseUrl = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api';
+  const baseUrl = import.meta.env.VITE_API_BASE_URL;
   const apiBase = baseUrl.replace('/api', '');
   return `${apiBase}/${imagePath}`;
 };
